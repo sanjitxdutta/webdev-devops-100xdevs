@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"></input>
+    <button onClick="addTodo()">Add Todo!</button>
+    <button onClick="deleteFirstTodo()">Delete first Todo</button>
+    <button onClick="deleteLastTodo()">Delete last Todo</button>
+    <div id="todos"></div>
+
+    <script>
+        let todos = [];
+
+        function addTodo() {
+            todos.push({
+                title: document.querySelector("input").value
+            });
+            render();
+        }
+
+        function deleteTodo(index) {
+            todos.splice(index, 1);
+            render();
+        }
+
+        function deleteFirstTodo() {
+            todos.splice(0, 1);
+            render();
+        }
+
+        function deleteLastTodo() {
+            todos.splice(todos.length - 1, 1);
+            render();
+        }
+
+        function createTodoComponent(todo, index) {
+            const spanEl = document.createElement("span");
+            const buttonEl = document.createElement("button");
+
+            spanEl.innerHTML = todo.title;
+            buttonEl.innerHTML = "Delete";
+            buttonEl.onclick = () => {
+                deleteTodo(index);
+            };
+
+
+            const divEl = document.createElement("div");
+            divEl.appendChild(spanEl);
+            divEl.appendChild(buttonEl);
+
+            return divEl;
+        }
+
+        function render() {
+            document.querySelector("#todos").innerHTML = "";
+            for (let i = 0; i < todos.length; i++) {
+                const element = createTodoComponent(todos[i], i);
+
+                document.querySelector("#todos").appendChild(element);
+            }
+        }
+    </script>
+</body>
+
+</html>
