@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="screen" id="main-screen">
+        <h1>Click a Color to Change Background</h1>
+    </div>
+
+    <div class="color-panel" id="color-panel">
+        <!-- Predefined Buttons -->
+        <button class="color-button" style="background-color: red;" data-color="red">#FF0000</button>
+        <button class="color-button" style="background-color: blue;" data-color="blue">#0000FF</button>
+        <button class="color-button" style="background-color: green;" data-color="green">#008000</button>
+        <button class="color-button" style="background-color: orange;" data-color="orange">#FFA500</button>
+
+        <!-- Custom Color Input -->
+        <div class="custom-color">
+            <input type="text" id="customColorInput" placeholder="#HEXCODE" />
+            <button onclick="addCustomColor()">Add</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
