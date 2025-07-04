@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
+
+body {
+    background-color: #fefcf3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 25rem;
+    background-color: #FEFAE0;
+    color: #283618;
+    border: 2px solid #BC6C25;
+    border-radius: 15px;
+}
+
+.heading {
+    height: 3rem;
+    background-color: #BC6C25;
+    color: #FEFAE0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.question-container {
+    height: 13rem;
+    margin: 10px;
+    border: 2px solid #606C38;
+    border-radius: 5px;
+    background-color: #fefcf3;
+}
+
+#qno {
+    width: 10rem;
+    height: 2rem;
+    margin: 10px auto;
+    background-color: #283618;
+    color: #fefcf3;
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+#question {
+    color: #283618;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 5.5rem);
+}
+
+.answer-container{
+    margin: 10px;
+    border: 2px solid #606C38;
+    border-radius: 5px;
+}
+
+.answer{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #BC6C25;
+    color: #FEFAE0;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.answer:hover{
+    background-color: #673a12;
+}
+
+span{
+    margin-left: 5px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.submit-button{
+    width: 25rem;
+    height: 3rem;
+    background-color: #BC6C25;
+    color: #FEFAE0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.submit-button:hover{
+    background-color: #673a12;
+}
