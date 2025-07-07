@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js" integrity="sha512-WkZrEcQ5LMyNy6Y2PQf+Tu3vMcsmKKRKuPXtJSTHQJ3mpuvLRlA5dlDDhrrcXfyWr6Z/y3wIMfjfqVFO/gDZYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <input type="text" id="a" placeholder="First value"></input>
+    <input type="text" id="b" placeholder="Second value"></input>
+
+    <button onclick="sendRequest()">Find sum</button>
+    <script>
+        async function sendRequest(){
+            const response =  await axios.post("http://localhost:3000/sum", {
+                a: document.getElementById("a").value,
+                b: document.getElementById("b").value
+            });
+            console.log(response.data);
+        }
+    </script>
+</body>
+</html>
