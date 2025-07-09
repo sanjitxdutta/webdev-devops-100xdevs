@@ -7,7 +7,7 @@ const { default: mongoose } = require("mongoose");
 
 const JWT_SECRET = "sanjit123";
 
-mongoose.connect("mongodb+srv://admin:epPw6KUER6K1X4Fu@cluster0.te3eafk.mongodb.net/todo-app-database")
+mongoose.connect("")
 
 const app = express();
 app.use(express.json());
